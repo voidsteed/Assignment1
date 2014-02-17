@@ -27,26 +27,24 @@ public class WorkerThreadClient extends Thread {
 			BufferedReader r = new BufferedReader(new InputStreamReader(
 					serverSocket.getInputStream()));
 
-			ops.println("hello world");
+			for (int i=0; i<1000; i++) {
+				ops.println("hello world");
+                r.readLine();
+			}
 
-			String line = r.readLine();
-			System.out.println("CLIENT THREAD "  + Thread.currentThread().getId()
-					+" received: " + line);			
-			//serverSocket.shutdownOutput();
-
-			System.out.println("CLIENT THREAD " + Thread.currentThread().getId()
+				System.out.println("CLIENT THREAD " + Thread.currentThread().getId()
 					+ " disconnected");
-
 			
 			ops.close();
+
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
-        } catch (IOException e) {
+    } catch (IOException e) {
         	e.printStackTrace();
-        } finally {
+    } finally {
 			try {
 				serverSocket.close();
-				System.out.println("CLIENT THREAD " + Thread.currentThread().getId()
+				System.out.println("Client thread " + Thread.currentThread().getId()
 						+ " finished");
 			} catch (IOException e) {
 				e.printStackTrace();

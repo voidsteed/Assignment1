@@ -4,7 +4,7 @@ import java.net.Socket;
 public class BenchmarkClient {
 
 
-	private static final int N = 10000;
+	private static final int N = 1000;
 	private static final String HOST = "localhost";
 	private static final int PORT = 3333;
 
