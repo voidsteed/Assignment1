@@ -17,11 +17,11 @@ public class WorkerThreadClient extends Thread {
 	@Override
 	public void run() {
 
-		System.out.println("CLIENT THREAD " + Thread.currentThread().getId()
+		System.out.println("Client Thread " + Thread.currentThread().getId()
 				+ " starting");
 
 		try {
-			System.out.println("CLIENT THREAD " + Thread.currentThread().getId()
+			System.out.println("Client Thread " + Thread.currentThread().getId()
 					+  " connected to the server");
 			PrintStream ops = new PrintStream(serverSocket.getOutputStream(), true);
 			BufferedReader r = new BufferedReader(new InputStreamReader(
