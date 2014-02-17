@@ -10,9 +10,9 @@ The benchmark client creates threads when it runs. Each thread will create a soc
 
 Outputs of the benchmark client testing:
 
-It takes 6601 ms to run 10000 strings	with simpleServer.
+It takes 7851 ms to run 1000 strings	with simpleServer.
 
-It takes 2084 ms to run 10000 strings with MTserver
+It takes 884 ms to run 1000 strings with MTserver
 
 
 Reasoning why the multithreaded server performs better
